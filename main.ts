@@ -9,6 +9,4 @@ const regexGo = {
 export const isDomain = DomainTester.isDomain;
 export const isEmail = EmailTester.isEmail;
 
-console.log(regexGo);
-
 export default regexGo;
