@@ -1,4 +1,5 @@
 import { isDomain } from '../main';
+import regexGo from '../main';
 import { expect } from 'chai';
 
 describe('isDomain', () => {
@@ -36,5 +37,8 @@ describe('isDomain', () => {
     expect(isDomain('http://google.com')).to.equal(false);
     expect(isDomain('google .com')).to.equal(false);
     expect(isDomain('google.g')).to.equal(false);
+  });
+  it('using without named import', () => {
+    expect(regexGo.isDomain('google.com')).to.equal(true);
   });
 });
