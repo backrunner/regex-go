@@ -1,12 +1,11 @@
-import * as DomainTester from './src/domain';
-import * as EmailTester from './src/email';
+import { isDomain } from './src/domain';
+import { isEmail } from './src/email';
 
 const regexGo = {
-  ...DomainTester,
-  ...EmailTester,
+  isDomain,
+  isEmail,
 };
 
-export const isDomain = DomainTester.isDomain;
-export const isEmail = EmailTester.isEmail;
+export { isDomain, isEmail };
 
 export default regexGo;
