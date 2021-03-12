@@ -10,7 +10,7 @@ Install this package:
 npm install regex-go --save
 ```
 
-Use the APIs whatever you like, e.g.:
+Use the APIs you need in your program, e.g.:
 
 ```js
 import { isDomain } from 'regex-go';
