@@ -1,0 +1,32 @@
+{
+  "name": "regex-go",
+  "description": "Regex Go is a convenient package that provides some common regular expressions.",
+  "version": "0.1.0",
+  "main": "./dist/regex-go.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha"
+  },
+  "author": "BackRunner",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@types/mocha": "^8.2.1",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "chai": "^4.3.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.21.0",
+    "mocha": "^8.3.2",
+    "rollup": "^2.41.1",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
