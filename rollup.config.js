@@ -2,6 +2,7 @@ import { babel } from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import filesize from 'rollup-plugin-filesize';
+import dts from "rollup-plugin-dts";
 
 const extensions = ['.js', '.ts'];
 
@@ -39,7 +40,7 @@ export default [
       name: 'regexGo',
       format: 'umd',
       file: './dist/regex-go.umd.js',
-      exports: "named",
+      exports: 'named',
     },
     plugins: [resolve, babelPlugin, filesize()],
   },
@@ -49,8 +50,13 @@ export default [
       name: 'regexGo',
       format: 'umd',
       file: './dist/regex-go.umd.min.js',
-      exports: "named",
+      exports: 'named',
     },
     plugins: [resolve, babelPlugin, terser(), filesize()],
+  },
+  {
+    input: './main.ts',
+    output: [{ file: './dist/regex-go.d.ts', format: 'es' }],
+    plugins: [dts()],
   },
 ];
