@@ -20,6 +20,8 @@ if (isDomain('google.com')) {
 }
 ```
 
+**If you are using Node.js, you may need to import this package from `regex-go/dist/regex-go.umd.js`, the default one is es moudle.**
+
 ## API Reference
 
 `isDomain(s: string): boolean`
