@@ -20,17 +20,29 @@ if (isDomain('google.com')) {
 }
 ```
 
-**If you are using Node.js, you may need to import this package from `regex-go/dist/regex-go.umd.js`, the default one is es moudle.**
+**If you are using Node.js, you may need to import this package from `regex-go/umd`, the default one is es moudle.**
 
 ## API Reference
+
+### Domain
 
 `isDomain(s: string): boolean`
 
 If the string is a domain.
 
+### Email
+
 `isEmail(s: string): boolean`
 
 If the string is an email address.
+
+### String
+
+`containsEmoji(s: string): boolean`
+Test if the string contains emoji. (the pattern comes from [`emoji-regex`](https://github.com/mathiasbynens/emoji-regex))
+
+`containsChinese(s: string): boolean`
+Test if the string contains Chinese characters.
 
 ## Build
 

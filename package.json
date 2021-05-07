@@ -9,7 +9,8 @@
     "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha"
   },
   "files": [
-    "dist"
+    "dist",
+    "umd"
   ],
   "author": "BackRunner",
   "license": "MIT",
@@ -28,6 +29,7 @@
     "eslint": "^7.21.0",
     "mocha": "^8.3.2",
     "rollup": "^2.41.1",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-dts": "^3.0.1",
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-terser": "^7.0.2",
