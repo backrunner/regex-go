@@ -10,3 +10,6 @@ export const containsEmoji = (str: string): boolean => {
 export const containsChinese = (str: string): boolean => {
   return isStr(str) ? chineseTester.test(str) : false;
 };
+
+export { emojiRGIRegex as emojiTester };
+export { chineseTester };

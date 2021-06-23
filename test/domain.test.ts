@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { isDomain } from '../main';
+import { isDomain, domainTester } from '../main';
 import regexGo from '../main';
 
 describe('isDomain', () => {
@@ -40,5 +40,8 @@ describe('isDomain', () => {
   });
   it('using without named import', () => {
     expect(regexGo.isDomain('google.com')).to.equal(true);
+  });
+  it('using regex', () => {
+    expect(domainTester.test('google.com')).to.equal(true);
   });
 });

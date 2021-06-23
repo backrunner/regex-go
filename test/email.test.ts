@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { isEmail } from '../main';
+import { isEmail, emailTester } from '../main';
 import regexGo from '../main';
 
 describe('isEmail', () => {
@@ -22,5 +22,8 @@ describe('isEmail', () => {
   });
   it('using without named import', () => {
     expect(regexGo.isEmail('t@gmail.com')).to.equal(true);
+  });
+  it('using regex', () => {
+    expect(emailTester.test('backrunner@gmail.com')).to.equal(true);
   });
 });

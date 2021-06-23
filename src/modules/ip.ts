@@ -14,3 +14,5 @@ export const isIPv4 = (str: string): boolean => {
 export const isIPv6 = (str: string): boolean => {
   return isStr(str) ? ipv6Tester.test(str) : false;
 };
+
+export { ipv4Tester, ipv6Tester };

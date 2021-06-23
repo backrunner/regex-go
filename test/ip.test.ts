@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { isIPAddress, isIPv4, isIPv6 } from '../main';
+import { isIPAddress, isIPv4, isIPv6, ipv4Tester, ipv6Tester } from '../main';
 import regexGo from '../main';
 
 describe('isIPAddress', () => {
@@ -34,5 +34,9 @@ describe('isIPAddress', () => {
     expect(regexGo.isIPAddress('127.0.0.1')).to.equal(true);
     expect(regexGo.isIPv4('127.0.0.1')).to.equal(true);
     expect(regexGo.isIPv6('240C::6666')).to.equal(true);
+  });
+  it('using regex', () => {
+    expect(ipv4Tester.test('223.5.5.5')).to.equal(true);
+    expect(ipv6Tester.test('2001:4860:4860::8844')).to.equal(true);
   });
 });
