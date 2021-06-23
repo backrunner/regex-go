@@ -1,6 +1,6 @@
+import { expect } from 'chai';
 import { isEmail } from '../main';
 import regexGo from '../main';
-import { expect } from 'chai';
 
 describe('isEmail', () => {
   it('normal email address', () => {

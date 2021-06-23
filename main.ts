@@ -1,11 +1,4 @@
-import { isDomain } from './src/domain';
-import { isEmail } from './src/email';
-
-const regexGo = {
-  isDomain,
-  isEmail,
-};
-
-export { isDomain, isEmail };
+import * as regexGo from './src';
+export * from './src';
 
 export default regexGo;

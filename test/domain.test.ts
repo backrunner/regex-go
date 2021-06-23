@@ -1,6 +1,6 @@
+import { expect } from 'chai';
 import { isDomain } from '../main';
 import regexGo from '../main';
-import { expect } from 'chai';
 
 describe('isDomain', () => {
   it('normal domain', () => {
