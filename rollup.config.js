@@ -22,25 +22,28 @@ export default [
   {
     input: './main.ts',
     output: {
+      name: 'regexGo',
       file: './dist/regex-go.js',
-      format: 'esm',
+      format: 'umd',
+      exports: 'named',
     },
     plugins: [resolve, babelPlugin, filesize()],
   },
   {
     input: './main.ts',
     output: {
+      name: 'regexGo',
       file: './dist/regex-go.min.js',
-      format: 'esm',
+      format: 'umd',
+      exports: 'named',
     },
     plugins: [resolve, babelPlugin, terser(), filesize()],
   },
   {
     input: './main.ts',
     output: {
-      name: 'regexGo',
-      format: 'umd',
-      file: './dist/regex-go.umd.js',
+      format: 'esm',
+      file: './dist/regex-go.esm.js',
       exports: 'named',
     },
     plugins: [
@@ -50,8 +53,8 @@ export default [
       copy({
         targets: [
           {
-            src: './dist/regex-go.umd.js',
-            dest: './umd',
+            src: './dist/regex-go.esm.js',
+            dest: './esm',
             rename: 'index.js',
           },
         ],
@@ -62,10 +65,8 @@ export default [
   {
     input: './main.ts',
     output: {
-      name: 'regexGo',
-      format: 'umd',
-      file: './dist/regex-go.umd.min.js',
-      exports: 'named',
+      format: 'esm',
+      file: './dist/regex-go.esm.min.js',
     },
     plugins: [
       resolve,
@@ -75,8 +76,8 @@ export default [
       copy({
         targets: [
           {
-            src: './dist/regex-go.umd.js',
-            dest: './umd',
+            src: './dist/regex-go.esm.min.js',
+            dest: './esm',
             rename: 'index.min.js',
           },
         ],
@@ -93,7 +94,7 @@ export default [
         targets: [
           {
             src: './dist/regex-go.d.ts',
-            dest: './umd',
+            dest: './esm',
             rename: 'index.d.ts',
           },
         ],

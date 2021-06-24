@@ -20,7 +20,7 @@ if (isDomain('google.com')) {
 }
 ```
 
-**If you are using Node.js, you may need to import this package from `regex-go/umd`, the default one is es moudle.**
+**If you want to use ESModule version, you should need to import this package from `regex-go/esm`, the default one is es moudle.**
 
 ## API Reference
 
