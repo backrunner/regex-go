@@ -52,7 +52,7 @@ export default [
           {
             src: './dist/regex-go.umd.js',
             dest: './umd',
-            rename: 'index.js'
+            rename: 'index.js',
           },
         ],
         hook: 'buildEnd',
@@ -77,7 +77,7 @@ export default [
           {
             src: './dist/regex-go.umd.js',
             dest: './umd',
-            rename: 'index.min.js'
+            rename: 'index.min.js',
           },
         ],
         hook: 'buildEnd',
@@ -87,6 +87,17 @@ export default [
   {
     input: './main.ts',
     output: [{ file: './dist/regex-go.d.ts', format: 'es' }],
-    plugins: [dts()],
+    plugins: [
+      dts(),
+      copy({
+        targets: [
+          {
+            src: './dist/regex-go.d.ts',
+            dest: './umd',
+            rename: 'index.d.ts',
+          },
+        ],
+      }),
+    ],
   },
 ];
